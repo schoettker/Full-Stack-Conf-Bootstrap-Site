@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
   </head>
-  <body>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
   
   <!--Navbar-->
   <nav class="navbar navbar-dark bg-primary navbar-fixed-top">
@@ -37,7 +37,7 @@
       <h1 class="display-2">Full Stack Conf</h1>
       <p class="lead">A One-day Conference About All Things JavaScript!</p>
       <div class="btn-group m-t-2" role="group" aria-tag="Basic example">
-        <button type="button" class="btn btn-primary btn-lg">Register Now</button>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">Register Now</button>
         <a href="#speakers" class="btn btn-secondary btn-lg">See Speakers</a>
       </div>
     </div>
@@ -45,7 +45,7 @@
   <!--End Jumbotron-->
   <div class="container p-t-2">
     <!--About-->
-    <div class="row">
+    <div id="about" class="row">
       <div class="col-lg-4 push-lg-4">
         <h3 class="m-b-2">About Full Stack Conf</h3>
         <img class="hidden-xs-down m-b-1 img-fluid img-rounded" src="img/pdx.jpg" alt="Portland">
@@ -135,7 +135,7 @@
     </div>
     <!--End Speakers-->
     <!--Schedule-->
-    <h1 class="display-4 text-xs-center m-y-3 text-muted">Schedule</h1>
+    <h1 id="schedule" class="display-4 text-xs-center m-y-3 text-muted">Schedule</h1>
     <ul class="list-group">
       <li class="list-group-item">
         <h4 class="list-group-item-heading">Keynote: Internet of Things <span class="tag tag-info tag-pill pull-xs-right">9:00am</span></h4>
@@ -168,7 +168,7 @@
     </ul>
     <!--End Schedule-->
     <!--Callout Button-->
-    <button type="button" class="btn btn-outline-info btn-lg d-block m-x-auto m-y-3">Don't Miss Out, Register Now</button>
+    <button type="button" class="btn btn-outline-info btn-lg d-block m-x-auto m-y-3" data-toggle="modal" data-target="#register">Don't Miss Out, Register Now</button>
     <!--End Callout Button-->
     <!-- signup form -->
     <hr>
@@ -219,7 +219,28 @@
         <small>&copy; 2016 Full Stack Conf &amp; Treehouse</small>
       </div>
     </div>
-    <!--End Footer-->  
+    <!--End Footer-->
+    <!--MODAL-->
+    <div id="register" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Register for Full Stack Conf</h4>
+          </div>
+          <div class="modal-body">
+            <p>Form goes here</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!--END MODAL-->  
   </div><!--End Container-->
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
