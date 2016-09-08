@@ -224,7 +224,7 @@
     <div id="register" class="modal fade">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-info">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -232,6 +232,12 @@
           </div>
           <div class="modal-body">
             <!--Registration Form-->
+            <div class="alert alert-warning alert-dismissible fade in" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <strong>Hurry!</strong> Early bird registration ends in 2 days.
+            </div>
             <form class="form">
               <h5 class="m-b-2">Basic Info</h5>
               <div class="form-group">
@@ -244,13 +250,42 @@
               </div>
               <div class="form-group">
                 <label for="role">Job Role:</label>
-                <select name="user_role" id="role" class="form-control">
+                <select name="user_role" id="role" class="form-control c-select">
                   <option value="full stack js developer">Full Stack JavaScript Developer</option>
                   <option value="front end developer">Front End Developer</option>
                   <option value="back end developer">Back End Developer</option>
                   <option value="designer">Designer</option>          
                   <option value="student">Student</option> 
                 </select>
+              </div>
+              <hr class="m-y-2">
+              <h5 class="m-b-2">Which Topics Interest You Most?</h5>
+              <div class="form-group custom-controls-stacked">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">JavaScript Frameworks</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">JavaScript Libraries</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Node.js</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Build Tools</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">ES2015</span>
+                </label>
               </div>
             </form>
             <!--End Registration Form-->
